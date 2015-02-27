@@ -1,1 +1,1 @@
-For algorithm /
+For algorithm
