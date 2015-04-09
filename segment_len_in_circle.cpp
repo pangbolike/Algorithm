@@ -58,10 +58,6 @@ struct point
         return sqrt(sqr(x) + sqr(y));
     }
 
-    friend bool operator <(const point& a,const point& b)
-    {
-        return a.x<b.x;
-    }
 };
 
 double det(const point &a,const point &b)
@@ -123,6 +119,10 @@ struct circle{
 vector<circle> cir;
 int n;
 point s,t;
+int pointCmp(const point& a,const point& b)
+{
+    return cmp(dist(a,s)-dist(b,s)) < 0;
+}
 vector<point> cross;
 double dis_point_segment(const point& pp,const point &ss,const point &tt){
     if (cmp(dot(pp-ss,tt-ss)) < 0) return (pp-ss).norm();
@@ -179,7 +179,8 @@ int main()
     {
         cross.push_back(t);
     }
-    sort(cross.begin(),cross.end());
+    sort(cross.begin(),cross.end(),pointCmp);
+
     double ans = 0;
     for (int i=0;i<(int(cross.size()) - 1) ; i++)
     {
