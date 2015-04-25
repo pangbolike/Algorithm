@@ -1,3 +1,8 @@
+/*
+*Author : pangbolike
+*Date : 2015/04/25
+*A new method for Aho-Corasick
+*/
 #include "CommTools.h"
 #include <iostream>
 bool Convert2hex(char str1[],char str2[],unsigned len1,unsigned len2)

@@ -1,3 +1,8 @@
+/*
+*Author : pangbolike
+*Date : 2015/04/25
+*A new method for Aho-Corasick
+*/
 #include <iostream>
 #include "CommTools.h"
 #include "Aho.h"
