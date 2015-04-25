@@ -16,6 +16,7 @@ $(OBJ_DIR)%$(OBJ_EXT):$(SRC_DIR)%$(CPPSRC_EXT)
 	@echo ""
 
 $(BUILD) : $(OBJECTS)
+	@echo -e "\033[1;33m\nCompiling $(OBJECTS) ==> $@ \033[0m..."
 	$(CXX) $(OBJECTS) -o $(BUILD)
 all:$(BUILD)
 	strip $(BUILD)
