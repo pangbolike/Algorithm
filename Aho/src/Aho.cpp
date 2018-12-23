@@ -45,7 +45,7 @@ bool Aho::ins(char str[],unsigned len1){
         {
             if (pos >= MaxSize)
             {
-                delete hex_str;
+                delete[] hex_str;
                 return false;
             }
             p->Kids[index] = &NodeArr[pos++];
@@ -54,7 +54,7 @@ bool Aho::ins(char str[],unsigned len1){
         i++;
     }
     p->Cnt++;
-    delete hex_str;
+    delete[] hex_str;
     return true;
 }
 
@@ -126,7 +126,7 @@ bool Aho::search(char str[],unsigned len1)
             p = p->Kids[index];
             if (p->Cnt != 0)
             {
-                delete hex_str;
+                delete[] hex_str;
                 return true;
             }
             i++;
@@ -142,7 +142,7 @@ bool Aho::search(char str[],unsigned len1)
         }
 
     }
-    delete hex_str;
+    delete[] hex_str;
     return false;
 }
 
